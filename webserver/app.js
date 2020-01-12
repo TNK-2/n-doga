@@ -32,7 +32,7 @@ User.sync().then(() => {
 var index = require('./routes/index');
 var login = require('./routes/login');
 var logout = require('./routes/logout');
-var users = require('./routes/users');
+var signup = require('./routes/signup');
 
 var app = express();
 app.use(helmet());
@@ -121,7 +121,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/login', login);
 app.use('/logout', logout);
-app.use('/users', users);
+app.use('/signup', signup);
 
 app.post(
   '/login',
